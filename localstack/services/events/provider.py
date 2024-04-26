@@ -47,7 +47,7 @@ from localstack.aws.api.events import (
 from localstack.aws.api.events import EventBus as ApiTypeEventBus
 from localstack.aws.api.events import Rule as ApiTypeRule
 from localstack.services.events.event_bus import EventBusService, EventBusServiceDict
-from localstack.services.events.models_v2 import (
+from localstack.services.events.models import (
     EventBus,
     EventBusDict,
     EventsStore,
