@@ -658,7 +658,7 @@ class EventsProvider(EventsApi, ServiceLifecycleHook):
                     for target in rule.targets.values():
                         target_sender = self._target_sender_store[target["Arn"]]
                         try:
-                            target_sender.send_event(event)
+                            target_sender.process_event(event)
                         except Exception as error:
                             failed_entries.append(
                                 {
