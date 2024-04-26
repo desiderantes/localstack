@@ -588,7 +588,6 @@ class TestEvents:
         )
 
     @markers.aws.validated  # TODO move to tests_event_patterns
-    @pytest.mark.skipif(is_v2_provider(), reason="V2 provider does not support this feature yet")
     def test_event_pattern(self, aws_client, snapshot, account_id, region_name):
         response = aws_client.events.test_event_pattern(
             Event=json.dumps(
